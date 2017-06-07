@@ -1,5 +1,5 @@
 {
-  "name": "WebApplicationBasic",
+  "name": "spaCoreJSS",
   "version": "0.0.0",
   "dependencies": {
     "@types/history": "4.5.1",
@@ -37,6 +37,23 @@
     "url-loader": "0.5.8",
     "webpack": "2.5.1",
     "webpack-hot-middleware": "2.18.0",
-    "webpack-merge": "4.1.0"
+    "webpack-merge": "4.1.0",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-class-property": "^1.0.6",
+    "eslint-plugin-react": "^7.0.1"
   }
 }
