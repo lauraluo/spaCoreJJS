@@ -5,6 +5,6 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 
 ReactDOM.render(
-	<Index/>,
+	<Index msg={window.initDatas} />,
 	document.getElementById('react-index')
 );

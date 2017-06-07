@@ -6,16 +6,19 @@ import Index from './components/index/Root';
 
 export default createServerRenderer(params => {
     return new Promise((resolve, reject) => {
+
+        console.log(params);
+
         const app = (
-			<Index/>
+			<Index msg={params.data.msg} />
         );
 		
         renderToString(app);
 
         params.domainTasks.then(() => {
             resolve({
-                html: renderToString(app)
-                // globals: { initialReduxState: store.getState() }
+                html: renderToString(app),
+                globals: { initDatas: params.data.msg }
             });
         }, reject); // Also propagate any errors back into the host application
     });

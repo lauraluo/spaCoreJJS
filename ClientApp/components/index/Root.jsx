@@ -1,12 +1,14 @@
 import React from 'react';
 
 class Index extends React.Component {
-
+    constructor(props) {
+        super(props);
+    }
     render() {
-        console.log("addddddd");
+        // console.log("addddddd");
         return( 
             <div>
-                <p>this is index</p>
+                <p>this is index {this.props.msg? "我來自view" : "我來自client"} </p>
             </div>
         );
         
