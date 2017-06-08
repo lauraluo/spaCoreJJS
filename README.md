@@ -4,10 +4,12 @@
 
 
 調整的部份有，捨棄typescript，並增加以下功能
-- 單元測試
-- storybook
-- webpack auto mapping entry 
-- scss loader
+- 單元測試：使用jest以及enzyme
+- storybook：展示模組
+- webpack auto mapping entry：放置在src第一層目錄下的jsx檔會自動視為entry點
+- scss loader：使用scss
+- es6 babel：使用es6新語法
+- eslint：檢查語法錯語
 
 
 ## 初始化
