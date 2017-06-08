@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "test": "jest",
+    "dev": "cross-env ASPNETCORE_ENVIRONMENT=Development dotnet run",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -86,6 +87,7 @@
     "@kadira/storybook": "^2.21.0",
     "babel-jest": "^20.0.3",
     "babel-preset-es2015-node5": "^1.2.0",
+    "cross-env": "^5.0.1",
     "enzyme": "^2.8.2",
     "enzyme-to-json": "^1.5.1",
     "eslint": "^3.19.0",
