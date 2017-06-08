@@ -2,7 +2,7 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 // import { createMemoryHistory } from 'history';
 import { createServerRenderer, RenderResult } from 'aspnet-prerendering';
-import Index from './jsx/components/index/Root';
+import Index from './script/components/index/Root';
 
 export default createServerRenderer(params => {
     return new Promise((resolve, reject) => {

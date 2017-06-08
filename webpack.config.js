@@ -16,7 +16,6 @@ function getEntries (matches){
         result[id] = entry; 
     });
 
-    console.log(result);
     return result;
 }
 
@@ -43,12 +42,12 @@ module.exports = (env) => {
     // Configuration for client-side bundle suitable for running in browsers
     const clientBundleOutputDir = './wwwroot/dist';
     const clientBundleConfig = merge(sharedConfig(), {
-        entry: getEntries(['./ClientApp/*.jsx','!./ClientApp/*.server.jsx']),
+        entry: getEntries(['./src/*.jsx','!./src/*.server.jsx']),
         module: {
             rules: [
                 { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' },
                 { 
-                    test: /\.jsx?$/, include: /ClientApp/, use: [
+                    test: /\.jsx?$/, include: /src/, use: [
                         {
                             loader: "eslint-loader",
                         },
@@ -105,11 +104,11 @@ module.exports = (env) => {
     // Configuration for server-side (prerendering) bundle suitable for running in Node
     const serverBundleConfig = merge(sharedConfig(), {
         resolve: { mainFields: ['main'] },
-        entry: getEntries(['./ClientApp/*.server.jsx']),
+        entry: getEntries(['./src/*.server.jsx']),
         module: {
             rules: [
                 { 
-                    test: /\.jsx?$/, include: /ClientApp/, use: [{
+                    test: /\.jsx?$/, include: /src/, use: [{
                         loader: 'babel-loader',
                         options: {
                             sourceMap: false,
@@ -123,14 +122,14 @@ module.exports = (env) => {
         plugins: [
             new webpack.DllReferencePlugin({
                 context: __dirname,
-                manifest: require('./ClientApp/dist/vendor-manifest.json'),
+                manifest: require('./src/dist/vendor-manifest.json'),
                 sourceType: 'commonjs2',
                 name: './vendor'
             })
         ],
         output: {
             libraryTarget: 'commonjs',
-            path: path.join(__dirname, './ClientApp/dist')
+            path: path.join(__dirname, './src/dist')
         },
         target: 'node',
         devtool: 'inline-source-map'

@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
-import DialogDemo  from '../ClientApp/jsx/components/dialog/DialogDemo';
-import Dialog, {DialogActions} from '../ClientApp/jsx//components/dialog/Dialog';
-import RefluxMock from '../ClientApp/jsx/core/RefluxMockProvider';
-import '../ClientApp/scss/site.scss';
+import DialogDemo  from '../src/script/components/dialog/DialogDemo';
+import Dialog, {DialogActions} from '../src/script//components/dialog/Dialog';
+import RefluxMock from '../src/script/core/RefluxMockProvider';
+import '../src/scss/site.scss';
 
 var DialogDefault = RefluxMock( Dialog, DialogActions, "showDialog", {
       title: "Dialog標題",

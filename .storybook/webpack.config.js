@@ -6,7 +6,7 @@ module.exports = {
       {
         test: /.scss$/,
         loaders: ["style", "css", "sass"],
-        include: path.resolve(__dirname, '../ClientApp/scss/')
+        include: path.resolve(__dirname, '../src/scss/')
       }
     ]
   }
