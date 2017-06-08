@@ -80,10 +80,10 @@
     "url-loader": "0.5.8",
     "webpack": "2.5.1",
     "webpack-hot-middleware": "2.18.0",
-    "webpack-merge": "4.1.0",
-    "webpack-replace": "^1.0.0"
+    "webpack-merge": "4.1.0"
   },
   "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
     "babel-jest": "^20.0.3",
     "babel-preset-es2015-node5": "^1.2.0",
     "enzyme": "^2.8.2",
@@ -99,7 +99,6 @@
     "jsdom": "^11.0.0",
     "react-addons-test-utils": "^15.5.1",
     "react-test-renderer": "^15.5.4",
-    "regenerator-runtime": "^0.10.5",
-    "@kadira/storybook": "^2.21.0"
+    "regenerator-runtime": "^0.10.5"
   }
 }
