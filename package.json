@@ -2,7 +2,9 @@
   "name": "spa-core-jss",
   "version": "0.0.0",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "babel": {
     "presets": [
@@ -97,6 +99,7 @@
     "jsdom": "^11.0.0",
     "react-addons-test-utils": "^15.5.1",
     "react-test-renderer": "^15.5.4",
-    "regenerator-runtime": "^0.10.5"
+    "regenerator-runtime": "^0.10.5",
+    "@kadira/storybook": "^2.21.0"
   }
 }
