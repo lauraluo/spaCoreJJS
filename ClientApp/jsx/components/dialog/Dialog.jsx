@@ -2,7 +2,7 @@ import Reflux from "reflux"
 import React from 'react'
 import $ from "jquery"
 import DialogButton from "./DialogButton"
-import DialogRelayoutMixin from "../core/Mixin.DialogRelayout"
+import DialogRelayoutMixin from "../../core/Mixin.DialogRelayout"
 
 var DialogActions = Reflux.createActions([
     "showDialog",

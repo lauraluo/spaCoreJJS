@@ -8,7 +8,7 @@ class Index extends React.Component {
         // console.log("addddddd");
         return( 
             <div>
-                <p>this is index {this.props.msg? "我來自view" : "我來自client"} </p>
+                <p>this is index hahaha {this.props.msg? "我來自view" : "我來自client"} </p>
             </div>
         );
         

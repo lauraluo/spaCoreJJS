@@ -3,6 +3,24 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 const merge = require('webpack-merge');
+const globby = require('globby');
+
+
+function getEntries (matches){
+    var result = {};
+    
+    var files = globby.sync(matches);
+
+    files.forEach(function(entry){
+        var id = path.basename(entry,'.jsx');
+        result[id] = entry; 
+    });
+
+    console.log(result);
+    return result;
+}
+
+
 
 module.exports = (env) => {
     const isDevBuild = !(env && env.prod);
@@ -25,7 +43,7 @@ module.exports = (env) => {
     // Configuration for client-side bundle suitable for running in browsers
     const clientBundleOutputDir = './wwwroot/dist';
     const clientBundleConfig = merge(sharedConfig(), {
-        entry: { 'index-client': './ClientApp/index_client.jsx' },
+        entry: getEntries(['./ClientApp/*.jsx','!./ClientApp/*.server.jsx']),
         module: {
             rules: [
                 { test: /\.(png|jpg|jpeg|gif|svg)$/, use: 'url-loader?limit=25000' },
@@ -62,7 +80,9 @@ module.exports = (env) => {
                 })}
             ]
         },
-        output: { path: path.join(__dirname, clientBundleOutputDir) },
+        output: { 
+            path: path.join(__dirname, clientBundleOutputDir)
+        },
         plugins: [
             new webpack.DllReferencePlugin({
                 context: __dirname,
@@ -85,7 +105,7 @@ module.exports = (env) => {
     // Configuration for server-side (prerendering) bundle suitable for running in Node
     const serverBundleConfig = merge(sharedConfig(), {
         resolve: { mainFields: ['main'] },
-        entry: { 'index-server': './ClientApp/index_server.jsx' },
+        entry: getEntries(['./ClientApp/*.server.jsx']),
         module: {
             rules: [
                 { 
