@@ -2,6 +2,14 @@
 
 來自[https://github.com/aspnet/JavaScriptServices](https://github.com/aspnet/JavaScriptServices)
 
+
+調整的部份有，捨棄typescript，並增加以下功能
+- 單元測試
+- storybook
+- webpack auto mapping entry 
+- scss loader
+
+
 ## 初始化
 
 載下來之後，在專南案目錄下執行令
