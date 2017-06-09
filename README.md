@@ -14,7 +14,15 @@
 
 ## 初始化
 
+首先安裝相關的node module
+
+```
+yarn install
+
+```
+
 載下來之後，在專南案目錄下執行令
+
 
 ```
 dotnet restore
@@ -25,12 +33,7 @@ dotnet publish
 
 ```
 
-安裝相關的node module
 
-```
-yarn install
-
-```
 
 # 運行專案
 
