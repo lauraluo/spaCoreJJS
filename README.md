@@ -21,6 +21,8 @@ dotnet restore
 
 dotnet build
 
+dotnet publish
+
 ```
 
 安裝相關的node module
