@@ -1,6 +1,6 @@
 # 說明
 
-來自[https://github.com/aspnet/JavaScriptServices](https://github.com/aspnet/JavaScriptServices)
+改編自[https://github.com/aspnet/JavaScriptServices](https://github.com/aspnet/JavaScriptServices)
 
 
 調整的部份有，捨棄typescript，並增加以下功能
